@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Maven+Pro&display=swap");
+
+.card {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  box-shadow: 0 5px 14px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 7px;
+  overflow: hidden;
+  position: relative;
+}
+
+.contenido-blanco {
+  position: relative;
+  flex: 2;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fe6189;
+  color: #fff;
+  cursor: pointer;
+  padding: 0 24px;
+  cursor: pointer;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  position: absolute;
+  bottom: 0;
+}
+
+.card:hover .btn-container {
+  height: 72px;
+}
+
+.btn-text {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.texto {
+  z-index: 2;
+  color: #000;
+  margin-left: 77px;
+  padding-right: 24px;
+  padding-left: 0px;
+}
+
+.texto > h2 {
+  margin-top: 0px;
+  margin-bottom: 16px;
+  font-family: "Lora", sans-serif;
+  font-weight: 700;
+  color: #151515;
+  font-size: 1.25rem;
+  line-height: 20px;
+}
+
+.texto > p {
+  margin-bottom: 0px;
+  font-family: "Maven Pro", sans-serif;
+  color: #444545;
+  font-size: 0.75rem;
+  line-height: 150%;
+  cursor: default;
+}
+
+.imagen-container {
+  transform: translate(-50%, -50%);
+}
+
+.card:hover .imagen-container {
+  transform: translate(-50%, calc(-50% - 30px)) scale(1.1); 
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+}
+
+.imagen-container, .texto {
+  transition: transform 0.3s ease; 
+}
+
+.card:hover .texto {
+  transform: translateY(-30%); 
+}
+
+
+.imagen-container {
+  position: absolute;
+  z-index: 2;
+  width: 108px;
+  height: 108px;
+  top: 50%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.imagen-sobre {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.efecto-glassmorphism {
+  flex: 1;
+  background-color: hsla(0, 0%, 100%, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 2px solid hsla(0, 0%, 100%, 0.2);;
+  position: relative;
+  z-index: 1;
+}
+
+.content-icons {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 0 24px;
+  position: absolute;
+  bottom: 0;
+}
+
+.icon-container {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover .icon-container:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s; 
+}
+
+.card:hover .icon-container:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.card:hover .icon-container:nth-child(3) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s; 
+}
